@@ -11,6 +11,6 @@ public class Factorial {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(new Factorial().factorial(9));
+		System.out.println(new Factorial().factorial(Integer.parseInt(args[0])));
 	}
 }
