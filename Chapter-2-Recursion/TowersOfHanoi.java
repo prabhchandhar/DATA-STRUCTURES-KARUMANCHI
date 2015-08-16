@@ -19,7 +19,6 @@ public class TowersOfHanoi {
 
 		   public void solve(int n, String start, String auxiliary, String end) {
 		       if (n == 1) {
-		           
 		    	   j =j +1;
 		    	   System.out.print("TIMES: "+j+" ");
 		    	   System.out.println(start + " -> " + end);
