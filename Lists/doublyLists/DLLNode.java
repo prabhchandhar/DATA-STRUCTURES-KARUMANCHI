@@ -1,5 +1,7 @@
 package doublyLists;
 
+import singleLists.ListNode;
+
 public class DLLNode {
 	
 	private int data;
@@ -34,6 +36,14 @@ public class DLLNode {
 		this.next = next;
 	}
 	
-	
+	public static int sizeOfList(DLLNode headerNode){
+		int length = 0;
+		DLLNode currentNode = headerNode;
+		while(currentNode!=null){
+			length = length+1;
+			currentNode = currentNode.getNext();
+		}
+		return length;
+	}
 
 }
