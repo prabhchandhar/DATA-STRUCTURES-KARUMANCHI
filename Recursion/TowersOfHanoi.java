@@ -14,30 +14,20 @@ public class TowersOfHanoi {
 	 * 
 	 * **/
 
-	int j=0;
-
-
-		   public void solve(int n, String start, String auxiliary, String end) {
-		       if (n == 1) {
-		    	   j =j +1;
-		    	   System.out.print("TIMES: "+j+" ");
-		    	   System.out.println(start + " -> " + end);
-		    	   
-		           
-		       } else {
-		           solve(n - 1, start, end, auxiliary);
-		           j=j+1;
-		           System.out.print("TIMES: "+j+" ");
-		           System.out.println(start + " -> " + end);
-		           solve(n - 1, auxiliary, start, end);
-		       }
-		   }
-
 		   public static void main(String[] args) {
 		       TowersOfHanoi towersOfHanoi = new TowersOfHanoi();
 		       
-		       towersOfHanoi.solve(5, "A", "B", "C");
+		       towersOfHanoi.towersOfHanoi(3, "A", "C", "B");
 		   }
 		
-	
+	public void towersOfHanoi(int count, String source, String destination, String spare){
+		if(count==1){
+			System.out.println(source+"--->"+destination);
+		}
+		else{
+			towersOfHanoi(count -1, source, spare, destination);
+			towersOfHanoi(1, source, destination, spare);
+			towersOfHanoi(count -1 , spare, destination, source);
+		}
+	}
 }
